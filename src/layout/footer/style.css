@@ -32,6 +32,9 @@
     color: red;
     /* color: #B8B8BB; */
 }
+.seler_link:hover{
+    color: red;
+}
 .balnc_footer{
     display: flex;
     /* margin-top: 10px; */
@@ -46,4 +49,33 @@
 }
 .add_img:hover{
     cursor: pointer;
+}
+
+
+@media screen and (max-width:850px){
+    .label_div{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:450px){
+    .label_div{
+        margin-left: 5px;
+       font-size: .8em;
+    }
+}
+@media screen and (max-width:370px){
+    .footer_container{
+        height: 55px;
+        padding-bottom: 10px;
+    }
+    .main_footer_div{
+      flex-wrap: wrap;
+     }
+     .balnc_footer{
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+    .label_div{
+        font-size: .9em;
+    }
 }

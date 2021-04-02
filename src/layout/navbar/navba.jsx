@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { BsFillHouseFill } from 'react-icons/bs'
 import { IoMdArrowDropdown } from 'react-icons/io'
@@ -156,68 +156,74 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav nav_ul">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" >
+                            <Link className="nav-link active" to='/news' aria-current="page" >
                                 <BsFillHouseFill className='nav_icon' />News</Link>
                         </li>
                         
                         <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 CCV/Fullz
+                           <IoMdArrowDropdown className='nav_more_icon' />
+
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" to='/buy-ccv' >Buy CCV/Fullz</Link></li>
+                                <li><Link className="dropdown-item" to='cart-ccv' >Cart CCV/Fullz</Link></li>
+                                <li><Link className="dropdown-item" to='orders-ccv' >Orders CCV/Fullz</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                Dumps
+                           <IoMdArrowDropdown className='nav_more_icon' />
+
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >Buy Dumps(USA/WorldWide)</Link></li>
+                                <li><Link className="dropdown-item" >Cart Dumps</Link></li>
+                                <li><Link className="dropdown-item" >Orders Dumps</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link-sock dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Socks 5
+                            <IoMdArrowDropdown className='nav_more_icon' />
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >Buy Socks 5</Link></li>
+                                <li><Link className="dropdown-item" >Orders Socks 5</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                              SSN/DOB
+                             <IoMdArrowDropdown className='nav_more_icon' />
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >Buy SSN/DOB</Link></li>
+                                <li><Link className="dropdown-item" >Orders SSN/DOB</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Accounts
+                             <IoMdArrowDropdown className='nav_more_icon' />
+
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >Buy Accounts</Link></li>
+                                <li><Link className="dropdown-item" >Orders Accounts</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Billing
+                             <IoMdArrowDropdown className='nav_more_icon' />
+
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >Topup</Link></li>
+                                <li><Link className="dropdown-item" >History</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
@@ -225,23 +231,27 @@ export const Navbar = () => {
                         </li>
                         
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Support
+                             <IoMdArrowDropdown className='nav_more_icon' />
+
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >My invitation code</Link></li>
+                                <li><Link className="dropdown-item" >My tickets</Link></li>
+                                <li><Link className="dropdown-item" >Create tickets</Link></li>
+                                <li><Link className="dropdown-item" >Help center</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" ariaExpanded="false">
+                            <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Profile
+                             <IoMdArrowDropdown className='nav_more_icon' />
+
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" >Action</Link></li>
-                                <li><Link className="dropdown-item" >Another action</Link></li>
-                                <li><Link className="dropdown-item" >Something else here</Link></li>
+                                <li><Link className="dropdown-item" >Profile</Link></li>
+                                <li><Link className="dropdown-item" >Logout</Link></li>
                             </ul>
                         </li>
                     </ul>
