@@ -10,23 +10,26 @@ function App() {
   const selector = useSelector((state)=>{
     return state.userReducers.user
   })
+  console.log(selector)
 
   useEffect(() => {
 
     if (selector) {
       setTimeout(() => {
         setValidate(false)
-      }, 1000)
+        console.log('interval')
+      }, 2000)
+
     }
   })
 
   return (
 
 
-      <div>
+      <div >
 
         {validate ?
-          <Approuter />
+          <Approuter useer={validate} />
           :
           <Validation />
         }

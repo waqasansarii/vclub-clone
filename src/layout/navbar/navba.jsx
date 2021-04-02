@@ -167,9 +167,9 @@ export const Navbar = () => {
 
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link className="dropdown-item" to='/buy-ccv' >Buy CCV/Fullz</Link></li>
-                                <li><Link className="dropdown-item" to='cart-ccv' >Cart CCV/Fullz</Link></li>
-                                <li><Link className="dropdown-item" to='orders-ccv' >Orders CCV/Fullz</Link></li>
+                                <li><Link className="dropdown-item"  >Buy CCV/Fullz</Link></li>
+                                <li><Link className="dropdown-item"  >Cart CCV/Fullz</Link></li>
+                                <li><Link className="dropdown-item"  >Orders CCV/Fullz</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">

@@ -1,4 +1,5 @@
 import React from 'react'
+import {useHistory} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import {login} from '../state/reducer'
 
@@ -6,8 +7,10 @@ const LoginScreen = () => {
     
    const dispatch = useDispatch()
 
+     const history = useHistory()
     const handleLogin = ()=>{
         dispatch(login(true))
+         history.push('/news')
     }
     return (
         <div>
